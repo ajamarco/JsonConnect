@@ -53,7 +53,7 @@ public class books_list extends Fragment {
             mBooks = new ArrayList<>();
         }
         //initialize the mAdapter variable and set it to be the ListView Adapter
-        mAdapter = new ArrayAdapter<Book>(getActivity(),android.R.layout.simple_list_item_1,mBooks);
+        mAdapter = new BooksListAdapter(getActivity(),mBooks);
         mListView.setAdapter(mAdapter);
 
         //if mTask is null we check if there is connection. If so, we call the startDownload method
